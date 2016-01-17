@@ -111,4 +111,4 @@ There are other ways to debug. The built-in debugger is the most low-level appro
 
 ---
 
-<a href='https://learn.co/lessons/node-overview' data-visibility='hidden'>View this lesson on Learn.co</a>
+<a href='https://learn.co/lessons/node-debugger' data-visibility='hidden'>View this lesson on Learn.co</a>
