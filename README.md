@@ -45,7 +45,7 @@ if (a>=0.5) {
 }
 ```
 
-The bug is that we get tail every time. How can you debug it? Lauch the script in the debug mode with `$ node debug program.js`. You'd see this:
+The bug is that we get tail every time. How can you debug it? Launch the script in the debug mode with `$ node debug program.js`. You'd see this:
 
 ```
 $ node debug program.js
@@ -77,7 +77,7 @@ Press Ctrl + C to leave debug repl
 > a
 0
 >
-```  
+```
 
 The value is 0. You can restart the program with `restart`. Upon closer examination of the first line, we can detect that `Math.floor` will always round to the lowers integer which is 0 in this case. What we want to use in this program is `Math.round()`, not `Math.floor()`.
 
