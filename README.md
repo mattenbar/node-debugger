@@ -21,7 +21,7 @@ node debug program.js
 
 The prompt will turn into `debug>`. You can get the list of command with the `help` command.
 
-## Describe debugger and the commands
+## Describe Debugger And The Commands
 
 The debugger commands won't be new to a person familiar with debugging in other languages like Ruby or browser JavaScript (with the help of DevTools). There are:
 
