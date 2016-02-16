@@ -11,12 +11,12 @@ This lesson teaches how to use the built-in Node CLI debugger.
 1. Describe how to start Node debugger
 1. Describe debugger and the commands
 
-## Describe how to start Node debugger
+## Starting The Debugger
 
 Node comes with a built-in debugger. All you need to do is to start the program in a debug mode:
 
 ```
-$ node debug program.js
+node debug program.js
 ```
 
 The prompt will turn into `debug>`. You can get the list of command with the `help` command.
@@ -46,7 +46,7 @@ if (a>=0.5) {
 }
 ```
 
-The bug is that we get tail every time. How can you debug it? Launch the script in the debug mode with `$ node debug program.js`. You'd see this:
+The bug is that we get tail every time. How can you debug it? Launch the script in the debug mode with `node debug program.js`. You'd see this:
 
 ```
 $ node debug program.js
