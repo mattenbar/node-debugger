@@ -2,6 +2,8 @@
 
 ## Overview
 
+Have you ever had a pesky bug that you couldn't track with simple print or log statements? Console.logs are okay until they are not enough. Sometimes, it's painful not to be able to stop the execution process to look around the scope and investigate further.
+
 This lesson teaches how to use the built-in Node CLI debugger.
 
 ## Objectives
@@ -11,7 +13,7 @@ This lesson teaches how to use the built-in Node CLI debugger.
 
 ## Describe how to start Node debugger
 
-Have you ever had a pesky bug that you couldn't track with simple print or log statements? Console.log (print statements in JavaScript/Node) are okay until they are not enough. Sometimes, it's painful not to be able to stop the execution process to look around the scope and investigate further. Node comes with a built-in debugger. All you need to do is to start the program in a debug mode:
+Node comes with a built-in debugger. All you need to do is to start the program in a debug mode:
 
 ```
 $ node debug program.js
@@ -24,15 +26,14 @@ The prompt will turn into `debug>`. You can get the list of command with the `he
 The debugger commands won't be new to a person familiar with debugging in other languages like Ruby or browser JavaScript (with the help of DevTools). There are:
 
 * run: run program
-* cont (`c`): proceed with the execution
-* next (s): next step
-* step (s): step in
-* out (o): step out
-* backtrace (bt)
-* setBreakpoint (sb): put the break point
-* clearBreakpoint (cb): remove the break point
+* cont (c): continue, i.e., proceed with the execution until a breakpoint
+* next (n): step to the next line
+* step (s): step in (go deeper into the execution context)
+* out (o): step out (go out of the execution, skipping the deeper context)
+* setBreakpoint (sb): put the break point, e.g., `setBreakpoint(20)` sets the break point on line 20
+* clearBreakpoint (cb): remove the break point, e.g., `clearBreakpoint('script.js', 1) clears the break point in the `script.js` file on line 1.
 
-Other commands are: watch, unwatch, watchers, repl, restart, kill, list, scripts, breakOnException, breakpoints, version. We won't bore you and spend time covering all of them, just the bare minimum to give you the skills to start debugging.
+Other commands are: backtrace, watch, unwatch, watchers, repl, restart, kill, list, scripts, breakOnException, breakpoints, version. We won't bore you and spend time covering all of them, just the bare minimum to give you the skills to start debugging.
 
 Often times the bugs don't cause crashes. If you have a crash, you can examine the stack trace which contains the line numbers of the failed code. However, subtle bugs are harder to trace. They don't crash programs but the results are not what we expect. Consider this example of a program which generate head or tail similar to a coin flip, only there is a bug:
 
