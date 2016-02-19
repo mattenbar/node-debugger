@@ -101,6 +101,8 @@ if (a>=0.5) {
 }
 ```
 
+
+
 There are other ways to debug. The built-in debugger is the most low-level approach. The benefit is that it's available in any environment as long as you have Node.
 
 
@@ -124,6 +126,7 @@ accounts()
 If you use next, debugger won't go inside of `accounts` or `users`, but if you use step, then the debugger will go no only inside of these functions but also inside of the `console.log` and whatever `console.log` is calling which is plenty!
 
 Most likely, you would use some combination of step, next and breakpoints (`debugger` statements) with continue.
+
 
 ## Resources
 
