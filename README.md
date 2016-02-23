@@ -21,7 +21,8 @@ node debug program.js
 
 The prompt will turn into `debug>`. You can get the list of command with the `help` command.
 
-## Describe Debugger And The Commands
+
+## Debugger Commands
 
 The debugger commands won't be new to a person familiar with debugging in other languages like Ruby or browser JavaScript (with the help of DevTools). There are:
 
@@ -34,6 +35,8 @@ The debugger commands won't be new to a person familiar with debugging in other 
 * clearBreakpoint (cb): remove the break point, e.g., `clearBreakpoint('script.js', 1) clears the break point in the `script.js` file on line 1.
 
 Other commands are: backtrace, watch, unwatch, watchers, repl, restart, kill, list, scripts, breakOnException, breakpoints, version. We won't bore you and spend time covering all of them, just the bare minimum to give you the skills to start debugging.
+
+## Using the Debugger
 
 Often times the bugs don't cause crashes. If you have a crash, you can examine the stack trace which contains the line numbers of the failed code. However, subtle bugs are harder to trace. They don't crash programs but the results are not what we expect. Consider this example of a program which generate head or tail similar to a coin flip, only there is a bug:
 
@@ -99,7 +102,31 @@ if (a>=0.5) {
 }
 ```
 
+
+
 There are other ways to debug. The built-in debugger is the most low-level approach. The benefit is that it's available in any environment as long as you have Node.
+
+
+## Step vs. Next
+
+The difference between step (`s`) and next (`n`) is that next won't go into inner functions while step will go into each functions all the way to the bottom. This might take some time!
+
+Consider this example where we have two functions. 
+
+```
+var users = function(){
+  console.log('users')
+}
+var accounts = function(){
+  console.log('accounts')
+  users()
+}
+accounts()
+```
+
+If you use next, debugger won't go inside of `accounts` or `users`, but if you use step, then the debugger will go not only inside of these functions but also inside of the `console.log` and whatever `console.log` is calling.
+
+Most likely, you would use some combination of step, next and breakpoints (`debugger` statements) with continue.
 
 
 ## Resources
