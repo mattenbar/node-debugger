@@ -123,7 +123,7 @@ var accounts = function(){
 accounts()
 ```
 
-If you use next, debugger won't go inside of `accounts` or `users`, but if you use step, then the debugger will go no only inside of these functions but also inside of the `console.log` and whatever `console.log` is calling which is plenty!
+If you use next, debugger won't go inside of `accounts` or `users`, but if you use step, then the debugger will go not only inside of these functions but also inside of the `console.log` and whatever `console.log` is calling.
 
 Most likely, you would use some combination of step, next and breakpoints (`debugger` statements) with continue.
 
