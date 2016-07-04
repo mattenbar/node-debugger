@@ -19,7 +19,7 @@ Node comes with a built-in debugger. All you need to do is to start the program 
 node debug program.js
 ```
 
-The prompt will turn into `debug>`. You can get the list of command with the `help` command.
+The prompt will turn into `debug>`. You can get the list of commands with the `help` command.
 
 
 ## Debugger Commands
@@ -140,3 +140,5 @@ Most likely, you would use some combination of step, next and breakpoints (`debu
 ---
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/node-debugger' title='Node Debugger'>Node Debugger</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/node-debugger'>Node Debugger</a> on Learn.co and start learning to code for free.</p>
