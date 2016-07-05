@@ -8,12 +8,12 @@ This lesson teaches how to use the built-in Node CLI debugger.
 
 ## Objectives
 
-1. Describe how to start Node debugger
-1. Describe debugger and the commands
+1. Start the Node debugger
+1. Describe the debugger and its commands
 
 ## Starting The Debugger
 
-Node comes with a built-in debugger. All you need to do is to start the program in a debug mode:
+Node comes with a built-in debugger. All you need to do is to start the program in debug mode:
 
 ```
 node debug program.js
@@ -38,7 +38,7 @@ Other commands are: backtrace, watch, unwatch, watchers, repl, restart, kill, li
 
 ## Using the Debugger
 
-Often times the bugs don't cause crashes. If you have a crash, you can examine the stack trace which contains the line numbers of the failed code. However, subtle bugs are harder to trace. They don't crash programs but the results are not what we expect. Consider this example of a program which generate head or tail similar to a coin flip, only there is a bug:
+Oftentimes bugs don't cause crashes. If you have a crash, you can examine the stack trace which contains the line numbers of the failed code. However, subtle bugs are harder to trace. They don't crash programs but the results are not what we expect. Consider this example of a program which generates heads or tails similar to a coin flip. But there is a bug:
 
 ```js
 var a = Math.floor(Math.random())
@@ -49,7 +49,7 @@ if (a>=0.5) {
 }
 ```
 
-The bug is that we get tail every time. How can you debug it? Launch the script in the debug mode with `node debug program.js`. You'd see this:
+The bug is that we get tails every time. How can you debug it? Launch the script in the debug mode with `node debug program.js`. You'd see this:
 
 ```
 $ node debug program.js
